@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cicle</title>
+    <link rel="stylesheet" href="Main.css">
+</head>
+
+<body>
+    <div class="fixed">
+        <div class="nav">
+            <a href="Main.html">
+                <img src="img/Circle_Logo.svg" class="home">
+            </a>
+            <a href="#">
+                <img src="img/Circle_Logo.svg" alt="" class="about">
+            </a>
+        </div>
+    </div>
+    <div class="full maxi-menu">
+        <h1>Index</h1>
+        <div class="box">
+            <div class="bubble"><a href="ex.html" style="text-decoration: none;">
+                    <h1>나열</h1>
+                </a>
+            </div>
+            <div class="bubble"><a href="dsu.html" style="text-decoration: none;">
+                <h1>비교</h1>
+            </a>
+            </div>
+            <div class="bubble">
+                <h1>넣기</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 페이지 로드 후 실행되는 부분
+
+            // 모바일 화면 기준 가로 크기
+            var mobileBp = 768;
+
+            // 마우스 이동 이벤트 핸들러
+            $("body").mousemove(function (event) {
+                // 모바일 화면일 경우 이벤트 무시
+                if ($(window).width() < mobileBp) {
+                    return;
+                }
+
+                // 전환 효과를 위한 설정
+                let transitionPercent = 0.1;
+                let x = event.pageX;
+                let pageWidth = $(window).width();
+                let tmargin = pageWidth * transitionPercent;
+                let maxN = 2 * tmargin;
+
+                // 메뉴 너비와 각도의 최대 및 최소 값 설정
+                let MAX = 42;
+                let min = 26.5;
+                let angleMin = -90;
+                let angleMax = 0;
+
+                // 마우스 위치에 따라 메뉴 조절
+                if (x < (pageWidth / 3 - tmargin)) {
+                    maxiMenuSetWidths(MAX, min, min);
+                    maxiMenuSetAngles(angleMax, angleMin, angleMin);
+                }
+                if (x >= (pageWidth / 3 - tmargin) && x <= (pageWidth / 3 + tmargin)) {
+                    let n = x - (pageWidth / 3 - tmargin);
+                    let offset = (MAX - min) * n / maxN;
+                    let width1 = MAX - offset;
+                    let width2 = min + offset;
+                    maxiMenuSetWidths(width1, width2, min);
+                    let angle1 = angleMin * n / maxN;
+                    let angle2 = angleMin - angle1;
+                    maxiMenuSetAngles(angle1, angle2, angleMin);
+                }
+                if (x > pageWidth / 3 + tmargin && x < 2 * pageWidth / 3 - tmargin) {
+                    maxiMenuSetWidths(min, MAX, min);
+                    maxiMenuSetAngles(angleMin, angleMax, angleMin);
+                }
+                if (x >= 2 * pageWidth / 3 - tmargin && x <= 2 * pageWidth / 3 + tmargin) {
+                    let n = x - (2 * pageWidth / 3 - tmargin);
+                    let offset = (MAX - min) * n / maxN;
+                    let width1 = MAX - offset;
+                    let width2 = min + offset;
+                    maxiMenuSetWidths(min, width1, width2);
+                    let angle1 = angleMin * n / maxN;
+                    let angle2 = angleMin - angle1;
+                    maxiMenuSetAngles(angleMin, angle1, angle2);
+                }
+                if (x > 2 * pageWidth / 3 + tmargin) {
+                    maxiMenuSetWidths(min, min, MAX);
+                    maxiMenuSetAngles(angleMin, angleMin, angleMax);
+                }
+            });
+
+            // 메뉴 너비 설정 함수
+            function maxiMenuSetWidths($v1, $v2, $v3) {
+                $(".maxi-menu .bubble:nth-child(1)").width($v1 + "%");
+                $(".maxi-menu .bubble:nth-child(2)").width($v2 + "%");
+                $(".maxi-menu .bubble:nth-child(3)").width($v3 + "%");
+            }
+
+            // 메뉴 각도 설정 함수
+            function maxiMenuSetAngles($v1, $v2, $v3) {
+                $(".maxi-menu .bubble:nth-child(1) h1").css("transform", "rotate(" + $v1 + "deg)");
+                $(".maxi-menu .bubble:nth-child(2) h1").css("transform", "rotate(" + $v2 + "deg)");
+                $(".maxi-menu .bubble:nth-child(3) h1").css("transform", "rotate(" + $v3 + "deg)");
+            }
+
+            // 스크롤 이벤트 핸들러
+            $(window).scroll(function (e) {
+                // 헤더 애니메이션
+                didScroll = true;
+                var top = $(window).scrollTop();
+
+                // 푸터 표시
+                var opacity = -1 * ($("body").height() - top - $(window).height()) / $("body>footer").outerHeight();
+                if (opacity < 0) {
+                    opacity = 0;
+                }
+                $("body>footer").css("opacity", opacity);
+
+                // 모바일 화면일 경우 이벤트 무시
+                if ($(window).width() >= mobileBp) {
+                    return;
+                }
+
+                // 스크롤 이벤트 처리
+                var MAX = 90; // vw
+                var min = 30; // vw
+                var wh = $(window).height();
+                var ww = $(window).width();
+                var MAXp = MAX / 100 * ww;
+                var minp = min / 100 * ww;
+
+                var top = $(window).scrollTop();
+
+                $(".maxi-menu .bubble").each(function () {
+                    pos = $(this).position().top;
+
+                    distanceToTop = pos - top;
+                    distanceToCenter = Math.abs(distanceToTop + MAXp / 2 - wh / 2);
+                    percent = MAX - MAX * distanceToCenter / (MAXp / 2);
+                    if (percent < min)
+                        percent = min;
+
+                    $(this).css("height", percent + "vw");
+                    $(this).children("h1").css("lineHeight", percent + "vw");
+                });
+            });
+
+            $('body').css('overflow-y', 'hidden');
+        });
+    </script>
+</body>
+
+</html>

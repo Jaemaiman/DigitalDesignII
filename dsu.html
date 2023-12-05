@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            transform: translate(0, -50%);
+        }
+
+        .full {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(img/Circle_Logo.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 90%;
+        }
+
+        .container {
+            margin: auto;
+            width: 1600px;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .swiper {
+            width: 800px;
+            height: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            justify-items: right;
+            margin: 0;
+            top: 15%;
+        }
+
+        .swiper-slide {
+            width: 800px;
+            height: 800px;
+            /* background-color: #fff; */
+        }
+
+        .left-text {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            transform: translate(0, -50%);
+            top: 50%;
+        }
+
+        .left-text>h1 {
+            position: relative;
+            color: #fff;
+            top: 20%;
+            text-align: right;
+            font-size: 5em;
+        }
+
+        .left-text>h3 {
+            position: relative;
+            color: #fff;
+            top: 20%;
+            text-align: right;
+            font-size: 3em;
+            font-weight: 400;
+        }
+
+        .right-text {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            transform: translate(100%, -50%);
+            top: 50%;
+        }
+
+        .right-text>h1 {
+            position: relative;
+            color: #fff;
+            top: 20%;
+            text-align: left;
+            font-size: 5em;
+        }
+
+        .right-text>h3 {
+            position: relative;
+            color: #fff;
+            top: 20%;
+            text-align: left;
+            font-size: 3em;
+            font-weight: 400;
+        }
+
+        /* fixed */
+
+        .nav {
+            position: fixed;
+            z-index: 998;
+            top: 80px;
+            width: 100px;
+            z-index: 999;
+        }
+
+        .home {
+            position: fixed;
+            left: 80px;
+            width: 100px;
+            height: 100px;
+            z-index: 999;
+        }
+
+        .about {
+            position: fixed;
+            right: 80px;
+            width: 100px;
+            height: 100px;
+            z-index: 999;
+        }
+
+        .about {
+            display: flex;
+            justify-content: right;
+        }
+
+        .home {
+            display: flex;
+            justify-content: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed">
+        <div class="nav">
+            <a href="Main.html">
+                <img src="img/Circle_Logo.svg" class="home">
+            </a>
+            <a href="#">
+                <img src="img/Circle_Logo.svg" alt="" class="about">
+            </a>
+        </div>
+    </div>
+    <div class="full">
+        <div class="container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper left">
+                    <div class="swiper-slide">
+                        <img src="img/slide/1l.png" alt="" style="width: 3.4%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide/2l.png" alt="" style="width: 6.8%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/3l.png" alt=""
+                            style="width: 10.2%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/4l.png" alt=""
+                            style="width: 13.6%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/5l.png" alt=""
+                            style="width: 17%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/6l.png" alt=""
+                            style="width: 20.4%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/7l.png" alt=""
+                            style="width: 23.8%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/8l.png" alt=""
+                            style="width: 27.2%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/9l.png" alt=""
+                            style="width: 30.6%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="img/slide/10l.png" alt=""
+                            style="width: 34.4%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/11l.png" alt=""
+                            style="width: 37.4%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/12l.png" alt=""
+                            style="width: 40.8%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/13l.png" alt=""
+                            style="width: 44.2%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/14l.png" alt=""
+                            style="width: 47.6%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/15l.png" alt=""
+                            style="width: 51%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/16l.png" alt=""
+                            style="width: 54.4%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/17l.png" alt=""
+                            style="width: 57.8%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/18l.png" alt=""
+                            style="width: 61.2%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/19l.png" alt=""
+                            style="width: 64.6%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="img/slide/20l.png" alt=""
+                            style="width: 68%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/21l.png" alt=""
+                            style="width: 71.4%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/22l.png" alt=""
+                            style="width: 74.8%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/23l.png" alt=""
+                            style="width: 78.2%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/24l.png" alt=""
+                            style="width: 81.6%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/25l.png" alt=""
+                            style="width: 85%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/26l.png" alt=""
+                            style="width: 88.4%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/27l.png" alt=""
+                            style="width: 91.8%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/28l.png" alt=""
+                            style="width: 95.2%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/29l.png" alt=""
+                            style="width: 98.6%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="img/slide/30l.png" alt=""
+                            style="width: 102%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/31l.png" alt=""
+                            style="width: 105.4%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/32l.png" alt=""
+                            style="width: 108.8%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/33l.png" alt=""
+                            style="width: 112.2%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/34l.png" alt=""
+                            style="width: 115.6%; position: absolute; top: 50%; right: 0;">
+                        <div class="left-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper right">
+                    <div class="swiper-slide"><img src="img/slide/1r.png" alt=""
+                            style="width: 3.4%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/2r.png" alt=""
+                            style="width: 6.8%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/3r.png" alt=""
+                            style="width: 10.2%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/4r.png" alt=""
+                            style="width: 13.6%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/5r.png" alt=""
+                            style="width: 17%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/6r.png" alt=""
+                            style="width: 20.4%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/7r.png" alt=""
+                            style="width: 23.8%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/8r.png" alt=""
+                            style="width: 27.2%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/9r.png" alt=""
+                            style="width: 30.6%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="img/slide/10r.png" alt=""
+                            style="width: 34.4%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/11r.png" alt=""
+                            style="width: 37.4%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/12r.png" alt=""
+                            style="width: 40.8%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/13r.png" alt=""
+                            style="width: 44.2%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/14r.png" alt=""
+                            style="width: 47.6%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/15r.png" alt=""
+                            style="width: 51%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/16r.png" alt=""
+                            style="width: 54.4%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/17r.png" alt=""
+                            style="width: 57.8%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/18r.png" alt=""
+                            style="width: 61.2%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/19r.png" alt=""
+                            style="width: 64.6%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="img/slide/20r.png" alt=""
+                            style="width: 68%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/21r.png" alt=""
+                            style="width: 71.4%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/22r.png" alt=""
+                            style="width: 74.8%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/23r.png" alt=""
+                            style="width: 78.2%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/24r.png" alt=""
+                            style="width: 81.6%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/25r.png" alt=""
+                            style="width: 85%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/26r.png" alt=""
+                            style="width: 88.4%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/27r.png" alt=""
+                            style="width: 91.8%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/28r.png" alt=""
+                            style="width: 95.2%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/29r.png" alt=""
+                            style="width: 98.6%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="img/slide/30r.png" alt=""
+                            style="width: 102%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/31r.png" alt=""
+                            style="width: 105.4%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/32r.png" alt=""
+                            style="width: 108.8%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/33r.png" alt=""
+                            style="width: 112.2%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide/34r.png" alt=""
+                            style="width: 115.6%; position: absolute; top: 50%; left: 0;">
+                        <div class="right-text">
+                            <h3>이름</h3>
+                            <h1>크기</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>

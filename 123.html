@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 위치 변경 예제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .cell {
+            float: left;
+        }
+
+        .row {
+            clear: both;
+            display: block;
+            content: "";
+        }
+
+        .slide {
+            width: 900px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .left,
+        .right {
+            width: 450px;
+            position: absolute;
+            top: 0;
+            height: 900px;
+            display: block;
+            /* justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center; */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .leftbox,
+        .rightbox {
+            width: 450px;
+            height: 300px;
+            flex: 1;
+            position: relative;
+            text-align: center;
+            line-height: 360px;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #rightMove-Up,
+        #rightMove-Down,
+        #leftMove-Up,
+        #leftMove-Down {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            z-index: 500;
+        }
+
+        #rightMove-Up,
+        #rightMove-Down {
+            right: 0;
+        }
+
+        #rightMove-Up {top: 10%;}
+        #rightMove-Down {top: 90%;}
+
+        #leftMove-Up,
+        #leftMove-Down {
+            left: 0;
+        }
+
+        #leftMove-Up {top: 10%;}
+        #leftMove-Down {top: 90%;}
+
+        .box1 {
+            background-color: red;
+        }
+
+        .box2 {
+            background-color: orange;
+        }
+
+        .box3 {
+            background-color: yellow;
+        }
+
+        .box4 {
+            background-color: green;
+        }
+
+        .box5 {
+            background-color: blue;
+        }
+
+        .box6 {
+            background-color: violet;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="left">
+            <div class="leftbox box1">1</div>
+            <div class="leftbox box2">2</div>
+            <div class="leftbox box3">3</div>
+        </div>
+        <button id="leftMove-Up">Up</button>
+        <button id="leftMove-Down">Down</button>
+        <div class="right">
+            <div class="rightbox box4">4</div>
+            <div class="rightbox box5">5</div>
+            <div class="rightbox box6">6</div>
+        </div>
+        <button id="rightMove-Up">Up</button>
+        <button id="rightMove-Down">Down</button>
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var currentIndex = 0;
+
+            $("#leftMove-Up").click(function () {
+                moveSlide(-1);
+            });
+
+            $("#leftMove-Down").click(function () {
+                moveSlide(1);
+            });
+
+            function moveSlide(direction) {
+                currentIndex = (currentIndex + direction + $(".leftbox").length) % $(".leftbox").length;
+                var slidePosition = currentIndex * (-300) + "px";
+                $(".left").css("transform", "translateY(" + slidePosition + ")");
+            }
+        });
+
+        $(document).ready(function () {
+            var currentIndex = 0;
+
+            $("#rightMove-Up").click(function () {
+                moveSlide(-1);
+            });
+
+            $("#rightMove-Down").click(function () {
+                moveSlide(1);
+            });
+
+            function moveSlide(direction) {
+                currentIndex = (currentIndex + direction + $(".rightbox").length) % $(".rightbox").length;
+                var slidePosition = currentIndex * (-300) + "px";
+                $(".right").css("transform", "translateY(" + slidePosition + ")");
+            }
+        });
+    </script>
+</body>
+
+</html>
