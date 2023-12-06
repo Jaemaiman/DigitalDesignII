@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동그라밍 맞춰보깅</title>
+    <link rel="stylesheet" href="match.css">
+</head>
+
+<body>
+    <div id="content" style="height: 400px;">
+        <div id="makeMeDraggable"> </div>
+        <div id="makeMeDroppable"> </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        $(init);
+
+        function init() {
+            $('#makeMeDraggable').draggable();
+            $('#makeMeDroppable').droppable({
+                drop: handleDropEvent
+            });
+        }
+
+        function handleDropEvent(event, ui) {
+            var draggable = ui.draggable;
+            alert('너무 잘맞추시네요 다른 동그라미도 도전해보세요!');
+        }
+    </script>
+</body>
+</html>
