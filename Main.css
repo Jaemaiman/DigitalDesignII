@@ -138,7 +138,7 @@ body>nav .langs .lang:hover,
     line-height: calc(54vw - 11.5vw);
     text-align: center;
     transform: rotate(-90deg);
-    font-size: 6vw;
+    font-size: 4.5em;
     letter-spacing: .1vw
 }
 
