@@ -86,9 +86,9 @@ body>nav .langs .lang:hover,
     box-sizing: border-box;
     position: relative;
     background-image: url(img/Circle.svg);
-    /* background-color: #eee; */
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
+    background-size: cover;
     background-size: 100%;
     display: flex;
     justify-content: center;
