@@ -18,6 +18,7 @@ body {
 }
 
 .sub-container {
+    margin: 5% 0 0 0;
     width: 4600px;
     height: 2760px;
     user-select: none;
