@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 h1,
 h2,
 h3,
@@ -6,7 +8,8 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
-    font-weight: normal
+    font-weight: normal;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 .underline-h1,
@@ -137,7 +140,9 @@ body>nav .langs .lang:hover,
     text-align: center;
     transform: rotate(-90deg);
     font-size: 3vw;
-    letter-spacing: .1vw
+    letter-spacing: .1vw;
+    font-weight: 600;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 .maxi-menu .box .bubble:first-of-type {
