@@ -8,10 +8,14 @@
 
 body {
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #content {
-    height: 300px;
+    position: relative;
+    height: 100vh;
+    top: 5%;
+    left: 3%;
 }
 
 #makeMeDraggable {

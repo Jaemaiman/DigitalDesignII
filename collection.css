@@ -22,16 +22,13 @@ body {
     width: 4600px;
     height: 2760px;
     user-select: none;
-    /* border: solid 4px red; */
-    /* background-color: #aaa; */
     position: relative;
-    /* z-index: -1; */
+    /* left: -50%; */
 }
 
 .item {
     width: 230px;
     height: 230px;
-    /* margin: 10px; */
 }
 
 .item>img {
