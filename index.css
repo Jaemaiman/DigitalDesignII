@@ -140,7 +140,7 @@ body>nav .langs .lang:hover,
     line-height: calc(54vw - 11.5vw);
     text-align: center;
     transform: rotate(-90deg);
-    font-size: 3vw;
+    font-size: 3vw; 
     letter-spacing: .1vw;
     font-weight: 600;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
